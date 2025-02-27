@@ -7,6 +7,8 @@
     --color-primary: #ffe45e;
     --fuente-pagina:"MiFuenteRegular", sans-serif;
     --fuente-pagina-bold:"MiFuenteBold", sans-serif;
+    --color-text-secundary: #000000;
+    --color-text-secundary: #323232;
 }
 @font-face {
     font-family: 'MiFuenteRegular';
@@ -69,7 +71,7 @@ body{
     border-radius: 4px;
 }
 .header_navbar-li:hover{
-    background-color: black; /* Cambio de color al pasar el mouse */
+    background-color: var(--color-text-secundary); /* Cambio de color al pasar el mouse */
     
 }
 .header_navbar-li-a:hover{
@@ -79,7 +81,7 @@ body{
 .header_navbar-li-a{
     text-decoration: none;
     transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out; /* Transición lenta */
-    color: black;
+    color: var(--color-text-secundary);
 }
 
 /*-----------------PRESENTACION-----------------*/
@@ -108,7 +110,7 @@ body{
 .main-description{
     display: flex;
     width: 100vw;
-    font-size: 12px;
+    font-size: 0.9vw;
     font-weight: 600;
     padding: 0% 6%;
     justify-content: space-between;
@@ -132,13 +134,13 @@ body{
     height: 50px;
     font-size: 20px;
     background-color: transparent;
-    border: 2px solid black;
+    border: 2px solid var(--color-text-secundary);
     transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out; /* Transición lenta */
     margin-bottom: 10px; /* Espaciado entre los botones */
 }
 
 .main-description-buttons-button1:hover, .main-description-buttons-button2:hover {
-    background-color: black; /* Cambio de color al pasar el mouse */
+    background-color: var(--color-text-secundary); /* Cambio de color al pasar el mouse */
     color: white;
 }
 
@@ -147,22 +149,30 @@ body{
 .main-specialty {
     text-align: center;
     padding: 20px;
-    background-color: blue;
+    background-color: transparent;
     border-radius: 10px;
+    height: 35%;
     margin: 20px;
 }
 
 .text-slider {
+    background-color:transparent;
     position: relative;
-    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
     overflow: hidden;
+    
+    font-family: var(--fuente-pagina-bold);
 }
+
 
 .text-slider__item {
     position: absolute;
     width: 100%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 6vw;
     font-weight: bold;
     opacity: 0;
     transform: translateY(100%);
@@ -196,6 +206,52 @@ body{
         transform: translateY(-100%);
     }
 }
+/* Esquinas superiores */
+.text-slider::before,
+.text-slider::after {
+    content: "";
+    position: absolute;
+    width: 6rem; /* Ajustado para responsividad */
+    height: 6rem;
+    border: 3px solid var(--color-text-secundary);
+}
+
+.text-slider::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.text-slider::after {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+/* Esquinas inferiores */
+.text-slider .corner-bottom-left,
+.text-slider .corner-bottom-right {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border: 3px solid var(--color-text-secundary);
+}
+
+.text-slider .corner-bottom-left {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+}
+
+.text-slider .corner-bottom-right {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
 
 .main-specialty{
     padding: 10%;
@@ -209,6 +265,50 @@ body{
 }
 
 
+/*-----------------CURSOS Y FORMACION-----------------*/
+
+.main-cursos{
+    width: 100%;
+}
+
+
+.main-cursos__h2{
+    text-align: center;
+    padding: 0% 10%;
+    font-family: var(--fuente-pagina-bold);
+    font-size: 2vw;
+}
+
+.main-cursos__items {
+    display: flex;
+    gap: 30px; /* Separa las dos columnas */
+    justify-content: space-between;
+    padding: 5% 10%;
+}
+
+.main-cursos__items-1,
+.main-cursos__items-2 {
+    display: flex;
+    flex-direction: column; /* Coloca los enlaces uno debajo del otro */
+    gap: 10px; /* Espacio entre los enlaces */
+    width: 40%;
+}
+
+.main-cursos__items-1 a, .main-cursos__items-2 a{
+    text-decoration: none;
+    gap: 10px;
+    color: #323232;
+}
+
+.main-cursos__items-h3{
+    font-size: 1.75vw;
+}
+
+
+
+
+
+
 
 
 
@@ -219,7 +319,7 @@ body{
     width: 16px;
     height: 16px;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid var(--color-text-secundary);
     border-radius: 0;
     pointer-events: none; /* Para que no interfiera con otros elementos */
     transition: transform 0.1s ease-out, top 0.2s ease-out, left 0.2s ease-out; /* Efecto de demora */
