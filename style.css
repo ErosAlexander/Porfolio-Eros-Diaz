@@ -35,7 +35,7 @@ body{
     padding: 0;
     width: 100%;
     height: 100vh; 
-    background-image:url("/img/fond\ pag2.jpg");
+    background-image:url("fond\ pag2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
