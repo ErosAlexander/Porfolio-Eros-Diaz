@@ -4,29 +4,35 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
-    --color-primary: #ffe45e;
+    --color-primary: white;
     --fuente-pagina:"MiFuenteRegular", sans-serif;
     --fuente-pagina-bold:"MiFuenteBold", sans-serif;
     --fuente-pagina-extrabold: "MiFuenteExtraBold", sans-serif;
     --color-text-secundary: #000000;
     --color-text-terciary: #323232;
+    --color-text-form: white;
+
 }
 @font-face {
     font-family: 'MiFuenteRegular';
-    src: url('/assets/OTF/Panchang-Regular.otf') format('opentype');
+    src: url('OTF/Panchang-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'MiFuenteExtraBold';
-    src: url('/assets/OTF/Panchang-Extrabold.otf') format('opentype');
+    src: url('OTF/Panchang-Extrabold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'MiFuenteBold';
-    src: url('/assets/OTF/Panchang-Bold.otf') format('opentype');
+    src: url('OTF/Panchang-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -92,7 +98,7 @@ body{
     
 }
 .header_navbar-li-a:hover{
-    color: white;
+    color: var(--color-primary);
 }
 
 .header_navbar-li-a{
@@ -166,7 +172,7 @@ body{
 
 .main-description-buttons-button1:hover, .main-description-buttons-button2:hover {
     background-color: var(--color-text-secundary); 
-    color: white;
+    color: var(--color-primary);
 }
 
 
@@ -364,7 +370,7 @@ body{
 
 
 .main-proyectos-h2{
-    padding: 5% 10% 0% 10%;
+    padding: 5% 10% 5% 10%;
     font-family: var(--fuente-pagina-bold);
     font-size: 3vw;
 }
@@ -414,6 +420,7 @@ body{
 
 .main-plataformas {
     display: flex;
+    height: 70vh;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
@@ -425,7 +432,7 @@ body{
     text-align: center;
     font-family: var(--fuente-pagina-bold);
     font-size: 4vw;
-    padding: 7% 0% 12% 0%;
+    padding: 5% 0% 7% 0%;
 }
 
 .main-plataformas-elementos {
@@ -443,18 +450,24 @@ body{
 
 .main-plataformas-elementos-ul {
     display: flex;
-    gap: 6vw;
     list-style: none;
+    height: auto;
     width: max-content;
     animation: scroll 40s linear infinite;
-    
+    gap: 5vw; /* Separación muy pequeña entre las imágenes */
+
 }
 
 .main-plataformas-elementos-items {
-    width: 100%; /* Aumentamos el tamaño de las imágenes */
-    height: auto;
+    width: 25vh; /* Imágenes más pequeñas */
+    height: auto; /* Mantén la proporción */
+    padding: 0%;
 }
-
+.img_educacion_it{
+    width: 25vh; /* Imágenes más pequeñas */
+    height: auto; /* Mantén la proporción */
+    padding: 0%;
+}
 /* Animación para mover los elementos en un bucle infinito */
 @keyframes scroll {
     from {
@@ -465,6 +478,199 @@ body{
     }
 }
 
+
+
+/*-----------------FORMULARIO DE CONTACTO-----------------*/
+
+.main-formulario {
+    position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+    display: flex;
+    overflow: visible; /* Permite que el degradado se superponga hacia arriba */
+    margin-top: 100px; /* Asegura espacio para el degradado */
+}
+
+.main-formulario::before {
+    content: ''; /* Necesario para que el pseudo-elemento se renderice */
+    position: absolute; /* Posiciona el degradado de manera absoluta */
+    top: -200px; /* Lo coloca 100px por encima del borde superior */
+    left: 0;
+    width: 100%; /* Cubre todo el ancho de la sección */
+    height: 200px; /* Alto del degradado */
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Degradado hacia arriba */
+    pointer-events: none; /* Evita que el degradado interfiera con los clics */
+    z-index: 1; /* Coloca el degradado por encima del contenido */
+}
+
+/* Parte izquierda (65%) */
+.main-formulario_izquierda {
+    width: 65%; /* Ocupa el 65% del ancho */
+    padding: 40px 20px; /* Ajusta el padding si es necesario */
+    display: flex;
+    font-family: var(--fuente-pagina-bold);
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-formulario-titulo {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+input{
+    all: unset;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.formulario {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    display: flex;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.formulario-grupo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.formulario-grupo label {
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+.formulario-grupo input,
+.formulario-grupo textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #A6AEBF;
+}
+
+.formulario-grupo textarea {
+    all: unset;
+    width: 100%;
+    border-bottom: 2px solid var(--color-primary);
+    color: #A6AEBF;
+}
+
+.formulario-boton {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: whitesmoke;
+    font-family: var(--fuente-pagina-extrabold);
+    border: none;
+    border: 2px solid var(--color-primary);
+    padding: 15px ;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.formulario-boton:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-secundary);
+}
+
+.main-formulario-redes {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.redes-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.redes-link:hover {
+    color: var(--color-primary);
+}
+
+/* Parte derecha (35%) */
+.main-formulario-derecha {
+    width: 35%; /* Ocupa el 35% del ancho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-text-secundary);
+}
+
+.main-formulario-derecha-h2 {
+    font-size: 60vh; /* Tamaño de fuente enorme */
+    font-family: var(--fuente-pagina-extrabold);
+    color: #1E201E; /* Color amarillo */
+    margin: 0;
+    line-height: 1; /* Evita espacio adicional */
+}
+
+/* Estilos específicos para el desplegable de "Asunto" */
+.formulario-grupo select#asunto {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #A6AEBF; /* Color del texto */
+    background-color: transparent; /* Fondo gris */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 4px; /* Bordes redondeados */
+    appearance: none; /* Elimina el estilo por defecto del navegador */
+    -webkit-appearance: none; /* Para navegadores basados en WebKit (Chrome, Safari) */
+    -moz-appearance: none; /* Para Firefox */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilo para las opciones del desplegable de "Asunto" */
+.formulario-grupo select#asunto option {
+    background-color: #f0f0f0; /* Fondo gris */
+    color: var(--color-text-secundary); /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilo cuando el desplegable de "Asunto" está enfocado */
+.formulario-grupo select#asunto:focus {
+    outline: none; /* Elimina el contorno por defecto */
+    border-color: #666; /* Cambia el color del borde al enfocar */
+}
+
+/* Estilo para el ícono del desplegable de "Asunto" (opcional) */
+.formulario-grupo select#asunto {
+    position: relative;
+}
+.formulario-grupo select#asunto::after {
+    content: '▼'; /* Ícono de flecha hacia abajo */
+    position: absolute;
+    right: 10px;
+    top: 70%; /* Ajusta la posición vertical */
+    transform: translateY(-50%);
+    pointer-events: none; /* Evita que el ícono interfiera con los clics */
+    color: #666; /* Color del ícono */
+}
+
+
+/*-----------------FOOTER-----------------*/
+
+
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--color-text-form);
+    background-color: var(--color-text-secundary);
+}
+footer a{
+    text-decoration: none;
+    color: var(--color-primary);
+}
 
 
 

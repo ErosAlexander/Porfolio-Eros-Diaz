@@ -11,10 +11,10 @@
         <h2 class="header_logo">E</h2>
         <nav>
             <ul class="header_navbar">
-                <li class="header_navbar-li"><a href="" class="header_navbar-li-a">TITULOS</a></li>
-                <li class="header_navbar-li"><a href="" class="header_navbar-li-a">SERVICIOS</a></li>
-                <li class="header_navbar-li"><a href="" class="header_navbar-li-a">GITHUB</a></li>
-                <li class="header_navbar-li"><a href="" class="header_navbar-li-a">LINKEDIN</a></li>
+                <li class="header_navbar-li"><a href="#cursos" class="header_navbar-li-a">CERTIFICADOS</a></li>
+                <li class="header_navbar-li"><a href="#servicios" class="header_navbar-li-a">SERVICIOS</a></li>
+                <li class="header_navbar-li"><a href="https://github.com/ErosAlexander" class="header_navbar-li-a">GITHUB</a></li>
+                <li class="header_navbar-li"><a href="https://www.linkedin.com/in/eros-diaz/" class="header_navbar-li-a">LINKEDIN</a></li>
             </ul>
         </nav>
     </header>
@@ -41,12 +41,14 @@
                 -MySQL
             </p>
             <section class="main-description-buttons">
-                <button class="main-description-buttons-button1">CV</button>
+                <a href="CvTech.pdf.pdf" download="CvTech">
+                    <button class="main-description-buttons-button1">CV</button>
+                </a>    
                 <button class="main-description-buttons-button2">HABLEMOS</button>
             </section>
         </section>
 
-        <section class="main-specialty">
+        <section class="main-specialty" id="servicios">
             <h2 class="main-specialty-h2"> ESPECIALISTA EN </h2>
             <section class="text-slider">
                 <div class="text-slider__item">Full-Stack</div>
@@ -59,7 +61,7 @@
             </section>
         </section>
 
-        <section class="main-cursos">
+        <section class="main-cursos" id="cursos">
             <h2 class="main-cursos__h2">CURSOS Y FORMACION</h2>
             <section class="main-cursos__items">
                 <section class="main-cursos__items-1">
@@ -119,23 +121,67 @@
             <section class="main-plataformas-elementos">
                 <h2 class="main-plataformas-h2">APRENDÍ CON...</h2>
                 <ul class="main-plataformas-elementos-ul">
-                    <li><img src="LOGO ORACLE.png" alt="" class="main-plataformas-elementos-items"></li>
-                    <li><img src="LOGO ORACLE.png" alt="" class="main-plataformas-elementos-items"></li>
-                    <li><img src="LOGO ORACLE.png" alt="" class="main-plataformas-elementos-items"></li>
-                    <li><img src="LOGO ORACLE.png" alt="" class="main-plataformas-elementos-items"></li>
-                    <li><img src="LOGO ORACLE.png" alt="" class="main-plataformas-elementos-items"></li>
-                    <li><img src="LOGO ORACLE.png" alt="" class="main-plataformas-elementos-items"></li>
-                    <li><img src="LOGO ORACLE.png" alt="" class="main-plataformas-elementos-items"></li>
-                    <li><img src="LOGO ORACLE.png" alt="" class="main-plataformas-elementos-items"></li>
-                    <li><img src="LOGO ORACLE.png" alt="" class="main-plataformas-elementos-items"></li>
-                    <li><img src="LOGO ORACLE.png" alt="" class="main-plataformas-elementos-items"></li>
+                    <li><img src="1 alura.png" alt="" class="main-plataformas-elementos-items"></li>
+                    <li><img src="2 udemy.png" alt="" class="main-plataformas-elementos-items"></li>
+                    <li><img src="3 IBM.png" alt="" class="main-plataformas-elementos-items"></li>
+                    <li><img src="4 guayerd.png" alt="" class="main-plataformas-elementos-items"></li>
+                    <li><img src="5 guayerd.png" alt="" class="main-plataformas-elementos-items"></li>
+                    <li><img src="argentina-programa-logo.png" alt="" class="main-plataformas-elementos-items"></li>
+                    <li><img src="logo-og.png" alt="" class="img_educacion_it"></li>
+                    <li><img src="LOGO-SEMILLERO.png" alt="" class="main-plataformas-elementos-items"></li>
+                    <li><img src="Talento tech.png" alt="" class="main-plataformas-elementos-items"></li>
+                    <li><img src="Oracle-Symbol.png" alt="" class="main-plataformas-elementos-items"></li>
                 </ul>
             </section>
         </section>
 
+        <section class="main-formulario">
+            <!-- Parte izquierda (65%) -->
+            <section class="main-formulario_izquierda">
+                <form class="formulario" action="https://formspree.io/f/xeoajldb" method="POST">
+                    <!-- Campo oculto para el asunto -->
+                    <input type="hidden" name="_subject" id="hidden-asunto">
+        
+                    <div class="formulario-grupo">
+                        <label for="nombre">NOMBRE</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Alan Gomez" required>
+                    </div>
+                    <div class="formulario-grupo">
+                        <label for="contacto">GMAIL</label>
+                        <input type="email" id="contacto" name="email" placeholder="alan@gmail.com / +54 011..." required>
+                    </div>
+                    <div class="formulario-grupo">
+                        <label for="asunto">ASUNTO</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="Solicitud de servicios">Solicitud de servicios</option>
+                            <option value="Oferta de empleo">Oferta de empleo</option>
+                        </select>
+                    </div>
+                    <div class="formulario-grupo">
+                        <label for="mensaje">TU MENSAJE</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Hola Eros, me comunico para..." required></textarea>
+                    </div>
+                    <button type="submit" class="formulario-boton">ENVIAR</button>
+                </form>
+                <div class="main-formulario-redes">
+                    <a href="#" class="redes-link">LinkedIn</a>
+                    <a href="#" class="redes-link">GitHub</a>
+                    <a href="#" class="redes-link">SOBRE MI</a>
+                    <a href="#" class="redes-link">TÍTULOS</a>
+                    <a href="#" class="redes-link">CURRICULUM</a>
+                </div>
+            </section>
+        
+            <!-- Parte derecha (35%) -->
+            <section class="main-formulario-derecha">
+                <h2 class="main-formulario-derecha-h2">E</h2>
+            </section>
+        </section>
     </main>
     <footer>
-
+        <p>EROS 2025</p>
+        <a href="">HECHO POR</a>
     </footer>
 
 
