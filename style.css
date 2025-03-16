@@ -107,7 +107,44 @@ body{
     color: var(--color-text-secundary);
 }
 
+@media (max-width: 1023px) {
+    .header_navbar {
+        display: none; /* La navbar desaparece en pantallas pequeñas */
+    }
+}
+@media (max-width: 768px) {
+    .main-description {
+        flex-direction: column; /* Cambiar la disposición a columna */
+        align-items: center; /* Alinear los elementos al centro */
+        padding: 0%; /* Eliminar los márgenes laterales */
+    }
 
+    .main-description-p1 {
+        width: 100%; /* Hacer el texto más ancho para pantallas pequeñas */
+        font-size: 4vw; /* Ajustar el tamaño de fuente */
+    }
+
+    .main-description-buttons {
+        padding-top: 15%;
+        
+        align-items: center; /* Alinear los botones al centro */
+    }
+
+    .main-description-buttons-button1,
+    .main-description-buttons-button2 {
+        width: 90%; /* Ajustar el ancho de los botones a un 90% */
+        font-family: var(--fuente-pagina);
+        font-size: 4vw; /* Reducir el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .main_presentacion-h2 {
+        font-size: 8vw; /* Ajustar el tamaño del subtítulo */
+    }
+
+    .main_presentacion-h1 {
+        font-size: 16vw; /* Ajustar el tamaño del título */
+    }
+}
 
 /*-----------------PRESENTACION-----------------*/
 
@@ -141,7 +178,7 @@ body{
 .main-description{
     display: flex;
     width: 100vw;
-    font-size: 0.9vw;
+    font-size: 1vw;
     font-weight: 600;
     padding: 0% 6%;
     justify-content: space-between;
@@ -149,7 +186,7 @@ body{
     
 }
 .main-description-p1{
-    width: 30%;
+    width: 70%;
 }
 .main-description-p2{
     width: 30%;
@@ -161,9 +198,9 @@ body{
 
 .main-description-buttons-button1, .main-description-buttons-button2{
     cursor: pointer;
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
+    width: 300px;
+    height: 70px;
+    font-size: 30px;
     background-color: transparent;
     border: 2px solid var(--color-text-secundary);
     transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
@@ -175,8 +212,11 @@ body{
     color: var(--color-primary);
 }
 
-
-
+@media (max-width: 768px){
+    .main-description-p1{
+        width: 95%;
+    }
+}
 /*-----------------ESPECIALIDADES-----------------*/
 
 
@@ -295,8 +335,9 @@ body{
 
 .main-specialty-h2{
     margin-bottom: 8%; 
-    font-size: 2rem; 
-    color: #333; 
+    font-family: var(--fuente-pagina-bold);
+    font-size: 3.5rem; 
+    color: var(--color-text-secundary); 
     text-transform: uppercase;
 }
 
@@ -306,12 +347,11 @@ body{
 
 
 
-.main-cursos{
+.main-cursos {
     width: 100%;
 }
 
-
-.main-cursos__h2{
+.main-cursos__h2 {
     text-align: center;
     padding: 0% 10%;
     font-family: var(--fuente-pagina-bold);
@@ -320,19 +360,20 @@ body{
 
 .main-cursos__items {
     display: flex;
-    gap: 30px; 
-    justify-content: space-between;
+    gap: 30px;
+    justify-content: center; /* Cambiado de space-between a center */
+    align-items: flex-start; /* Aseguramos que los elementos estén alineados hacia arriba */
     padding: 5% 10%;
 }
 
 .main-cursos__items-1,
 .main-cursos__items-2 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     width: 40%;
 }
 
-.main-cursos__items-1 a, .main-cursos__items-2 a{
+.main-cursos__items-1 a, .main-cursos__items-2 a {
     text-decoration: none;
     height: 4.5vw;
     padding: 6% 0%;
@@ -345,25 +386,65 @@ body{
 }
 
 .main-cursos__items-1 a:hover, .main-cursos__items-2 a:hover {
-    transform: translateX(30px); 
-    border-right: 5px solid black; 
+    transform: translateX(30px);
+    border-right: 5px solid black;
     transition: transform 0.4s ease, border-right 0.4s ease;
 }
 
-.main-cursos__items-h3{
+.main-cursos__items-h3 {
     font-size: 1.75vw;
 }
 
 .main-cursos__items-plus {
-    font-size: 2.6vw !important; 
+    font-size: 2.6vw !important;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
-    height: 4.5vw; 
+    align-items: center;
+    justify-content: center;
+    height: 4.5vw;
     padding: 0;
-    text-decoration: none; 
-    border-bottom: 2px solid black; 
+    text-decoration: none;
+    border-bottom: 2px solid black;
 }
+
+/* Media Query para pantallas pequeñas (Tabletas y móviles) */
+@media (max-width: 768px) {
+    .main-cursos__h2 {
+        font-size: 8vw;
+        padding: 0 5%;
+    }
+
+    .main-cursos__items {
+        flex-direction: column;
+        padding: 5% 0%;
+        gap: 20px;
+    }
+
+    .main-cursos__items-1,
+    .main-cursos__items-2 {
+        width: 90%;
+        margin: 0% 5%;
+        align-items: center; /* Alineamos los elementos en el centro */
+    }
+
+    .main-cursos__items-1 a, .main-cursos__items-2 a {
+        font-size: 4vw;
+        padding: 4% 0;
+        text-align: center;
+        height: auto;
+    }
+
+    .main-cursos__items-h3 {
+        font-size: 6vw;
+        padding: 5%;
+        text-align: center;
+    }
+
+    .main-cursos__items-plus {
+        font-size: 5vw !important;
+        height: auto;
+    }
+}
+
 
 
 /*-----------------PROYECTOS-----------------*/
@@ -395,7 +476,7 @@ body{
     border-radius: 13%;
 }
 
-.img_proy{
+.pag-img{
     height: 100%;
     width: 100%;
     text-align: center;
@@ -403,16 +484,17 @@ body{
     background-position: center;
 }
 
-.pag-1{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    object-position: center; 
-    border-radius: inherit;  
-    transition: border-radius 1.5s ease-in-out;
+
+
+@media (max-width: 768px){
+    .main-proyectos{
+        flex-direction: column;
+        height: 180vh;
+    }
+    .main-proyectos-proyecto{
+        margin: 5% 0%;
+    }   
 }
-
-
 
 
 /*-----------------PLATAFORMAS CON LAS QUE ESTUDIE-----------------*/
@@ -451,22 +533,16 @@ body{
 .main-plataformas-elementos-ul {
     display: flex;
     list-style: none;
-    height: auto;
+    height: 20vh;
     width: max-content;
     animation: scroll 40s linear infinite;
     gap: 5vw; /* Separación muy pequeña entre las imágenes */
-
 }
 
 .main-plataformas-elementos-items {
-    width: 25vh; /* Imágenes más pequeñas */
-    height: auto; /* Mantén la proporción */
-    padding: 0%;
-}
-.img_educacion_it{
-    width: 25vh; /* Imágenes más pequeñas */
-    height: auto; /* Mantén la proporción */
-    padding: 0%;
+    width: 22vw; /* Imágenes más pequeñas */
+    height: 20vh; /* Mantén la proporción */
+    
 }
 /* Animación para mover los elementos en un bucle infinito */
 @keyframes scroll {
@@ -475,6 +551,34 @@ body{
     }
     to {
         transform: translateX(-50%);
+    }
+}
+
+/* Media Query para pantallas de tablet y celular */
+@media (max-width: 768px) {
+    .main-plataformas {
+        height: auto; /* Ajustar la altura automáticamente */
+        margin: 2% 0 5% 0;
+    }
+
+    .main-plataformas-h2 {
+        font-size: 6vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        padding: 6% 0 14% 0;
+    }
+
+    .main-plataformas-elementos {
+        width: 95%; /* Hacerlo más ancho en pantallas pequeñas */
+        height: 40vh; /* Reducir la altura */
+    }
+
+    .main-plataformas-elementos-ul {
+        height: 15vh; /* Reducir la altura de la lista */
+        gap: 4vw; /* Ajustar el espacio entre elementos */
+    }
+
+    .main-plataformas-elementos-items {
+        width: 35vw; /* Aumentar tamaño de imágenes */
+        height: 12vh; /* Mantener proporción */
     }
 }
 
@@ -578,16 +682,20 @@ input{
 }
 
 .main-formulario-redes {
-    margin-top: 30px;
+    margin-top: 5%;
     display: flex;
+    height: 5vh;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 5%;
+    border-bottom: 2px solid white;
+    border-top:2px solid white;
     flex-wrap: wrap;
 }
 
 .redes-link {
     text-decoration: none;
-    color: #333;
+    color: #444;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -606,8 +714,8 @@ input{
 }
 
 .main-formulario-derecha-h2 {
-    font-size: 60vh; /* Tamaño de fuente enorme */
-    font-family: var(--fuente-pagina-extrabold);
+    font-size: 65vh; /* Tamaño de fuente enorme */
+    font-family: var(--fuente-pagina-bold);
     color: #1E201E; /* Color amarillo */
     margin: 0;
     line-height: 1; /* Evita espacio adicional */
@@ -655,6 +763,24 @@ input{
     color: #666; /* Color del ícono */
 }
 
+@media (max-width: 768px) {
+    .main-formulario {
+        flex-direction: column; /* Asegura que el contenido esté en una sola columna */
+        height: auto; /* Ajusta la altura automáticamente */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .main-formulario_izquierda {
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 20px; /* Reduce el padding para mejorar el espacio */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .main-formulario-derecha {
+        display: none; /* Oculta la parte derecha */
+    }
+}
+
 
 /*-----------------FOOTER-----------------*/
 
@@ -662,16 +788,32 @@ input{
 
 footer{
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     color: var(--color-text-form);
     background-color: var(--color-text-secundary);
+    padding: 0% 1%;
 }
 footer a{
     text-decoration: none;
     color: var(--color-primary);
 }
+.footer-form{
+    display: flex;
+    width: 65%;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--color-text-form);
+    background-color: var(--color-text-secundary);
+    padding: 0% 1%;
+}
 
+@media (max-width: 768px){
+    .footer-form{
+        width: 100%;
+    }
+}
 
 
 
