@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio Eros Alexandro Diaz</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="header">
         <h2 class="header_logo">E</h2>
@@ -13,8 +15,10 @@
             <ul class="header_navbar">
                 <li class="header_navbar-li"><a href="#cursos" class="header_navbar-li-a">CERTIFICADOS</a></li>
                 <li class="header_navbar-li"><a href="#servicios" class="header_navbar-li-a">SERVICIOS</a></li>
-                <li class="header_navbar-li"><a href="https://github.com/ErosAlexander" class="header_navbar-li-a">GITHUB</a></li>
-                <li class="header_navbar-li"><a href="https://www.linkedin.com/in/eros-diaz/" class="header_navbar-li-a">LINKEDIN</a></li>
+                <li class="header_navbar-li"><a href="https://github.com/ErosAlexander"
+                        class="header_navbar-li-a">GITHUB</a></li>
+                <li class="header_navbar-li"><a href="https://www.linkedin.com/in/eros-diaz/"
+                        class="header_navbar-li-a">LINKEDIN</a></li>
             </ul>
         </nav>
     </header>
@@ -25,25 +29,26 @@
             <h1 class="main_presentacion-h1">EROS</h1>
         </section>
 
-        <section class="main-description" >
+        <section class="main-description">
             <p class="main-description-p1">
                 Hola! Soy Eros Diaz, me encuentro estudiando un analisis con ciencia de datos y una
                 licenciatura en economia. <br>
-                La razón de esto es que cuando empece a estudiar el mundo de los 
+                La razón de esto es que cuando empece a estudiar el mundo de los
                 datos y que estos se podian utilizar para tomar decisiones
                 empresariales, pense "que mejor para esto que alguien que ademas de
                 saber hacer un analisis entiende el que, porque y para que de los
-                datos que necesita, que un economista" y decidí juntar mis dos 
+                datos que necesita, que un economista" y decidí juntar mis dos
                 pasiones en este camino que estoy ansioso de recorrer. <br>
-                En mi trayectoria espero formar parte de empresas en las cuales 
-                pueda aportar mi vision y profesionalismo para generar un cambio y 
+                En mi trayectoria espero formar parte de empresas en las cuales
+                pueda aportar mi vision y profesionalismo para generar un cambio y
                 dejar mi marca, espero que pronto podramos trabajar juntos. <br> <br> Saludos!!!
             </p>
             <section class="main-description-buttons">
-                <a href="CvTech.pdf.pdf" download="CvTech">
+                <a href="CvTech.pdf" download="CvTech">
                     <button class="main-description-buttons-button1">CV</button>
-                </a>    
-                <button class="main-description-buttons-button2">HABLEMOS</button>
+                </a>
+                <button onclick="document.querySelector('.main-formulario').scrollIntoView({ behavior: 'smooth' });"
+                    class="main-description-buttons-button2">HABLEMOS</button>
             </section>
         </section>
 
@@ -76,41 +81,80 @@
                     <a href="">EXCEL & POWER BI - UDEMY</a>
                     <a href="">SQL + MySQL - UDEMY</a>
                     <a href="">EXCEL AVANZADO</a>
-                </section>  
+                </section>
                 <section class="main-cursos__items-2">
-                    <h3 class="main-cursos__items-h3">Cursando actualmente</h3> 
-                    <a href="">LICENCIATURA EN ECONOMIA - UNM</a>
+                    <h3 class="main-cursos__items-h3">Cursando actualmente</h3>
                     <a href="">DATA SCIENCE Y MACHINE LEARNING - ORACLE ONE Y ALURA LATAM</a>
-                    <a href="">DATA ENGINEER LEARNING PATH - UDEMY</a>
-                    <a href="">DATA SCIENCE WITH PYTHON - UDEMY</a>
                     <a href="">ESPECIALIZACION EN ECOMMERCE Y DATA ANALYTICS - SEMILLERO DIGITAL</a>
-                    
-                </section> 
-            </section>    
+                    <a href="">DATA SCIENCE WITH PYTHON - UDEMY</a>
+                </section>
+            </section>
         </section>
         <h2 class="main-proyectos-h2">PROYECTOS</h2>
         <section class="main-proyectos">
+            <div class="carousel-container">
+                <!-- Flecha izquierda -->
+                <button class="carousel-button left" id="btn-prev">❮</button>
 
-            <div class="main-proyectos-proyecto">
-                <a href="/assets/Dashboard PB.pbix" download>
-                    <img src="Logo - Power Bi (1).jpeg"  alt="descargar proyecto power bi" class="pag-img">
-                </a> 
-            </div > 
-            
-            <div class="main-proyectos-proyecto">
-                <a href="https://erosalexander.github.io/Juego_Amigo_Secreto">
-                    <img src="IMG-juego-amigo-secreto.png"  alt="pagina amigo secreto" class="pag-img">
-                </a>
+                <!-- Carrusel -->
+                <div class="carousel-track" id="carousel-track">
+                    <div class="main-proyectos-proyecto">
+                        <a href="/assets/Dashboard PB.pbix" download>
+                            <img src="Logo - Power Bi (1).jpeg" alt="descargar proyecto power bi" class="pag-img">
+                            <div class="hover-info">Proyecto de análisis con Python</div>
+                        </a>
+                    </div>
+
+                    <div class="main-proyectos-proyecto">
+                        <a href="https://erosalexander.github.io/Juego_Amigo_Secreto">
+                            <img src="IMG-juego-amigo-secreto.png" alt="pagina amigo secreto" class="pag-img">
+                            <div class="hover-info">Proyecto de análisis con Python</div>
+                        </a>
+                    </div>
+
+                    <div class="main-proyectos-proyecto">
+                        <a href="https://erosalexander.github.io/Juego_Numero_Secreto">
+                            <img src="IMG-JUEGO-NUM-SECRETO.png" alt="juego número secreto" class="pag-img">
+                            <div class="hover-info">Proyecto de análisis con Python</div>
+                        </a>
+                    </div>
+
+                    <div class="main-proyectos-proyecto">
+                        <a href="https://erosalexander.github.io/Juego_Numero_Secreto">
+                            <img src="IMG-JUEGO-NUM-SECRETO.png" alt="juego número secreto" class="pag-img">
+                            <div class="hover-info">Proyecto de análisis con Python</div>
+                        </a>
+                    </div>
+
+                    <div class="main-proyectos-proyecto">
+                        <a href="https://erosalexander.github.io/Juego_Numero_Secreto">
+                            <img src="IMG-JUEGO-NUM-SECRETO.png" alt="juego número secreto" class="pag-img">
+                            <div class="hover-info">Proyecto de análisis con Python</div>
+                        </a>
+                    </div>
+
+                    <div class="main-proyectos-proyecto">
+                        <a href="https://erosalexander.github.io/Juego_Numero_Secreto">
+                            <img src="IMG-JUEGO-NUM-SECRETO.png" alt="juego número secreto" class="pag-img">
+                            <div class="hover-info">Proyecto de análisis con Python</div>
+                        </a>
+                    </div>
+
+                    <div class="main-proyectos-proyecto">
+                        <a href="https://erosalexander.github.io/Juego_Numero_Secreto">
+                            <img src="IMG-JUEGO-NUM-SECRETO.png" alt="juego número secreto" class="pag-img">
+                            <div class="hover-info">Proyecto de análisis con Python</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Flecha derecha -->
+                <button class="carousel-button right" id="btn-next">❯</button>
             </div>
-
-            <div class="main-proyectos-proyecto">
-                <a href="https://erosalexander.github.io/Juego_Numero_Secreto">
-                    <img src="IMG-JUEGO-NUM-SECRETO.png"  alt="descargar proyecto power bi" class="pag-img">
-                </a>
-            </div>
-
         </section>
-        
+
+
+
         <section class="main-plataformas">
             <section class="main-plataformas-elementos">
                 <h2 class="main-plataformas-h2">APRENDÍ CON...</h2>
@@ -128,14 +172,14 @@
                 </ul>
             </section>
         </section>
-
+        
         <section class="main-formulario">
             <!-- Parte izquierda (65%) -->
             <section class="main-formulario_izquierda">
                 <form class="formulario" action="https://formspree.io/f/xeoajldb" method="POST">
                     <!-- Campo oculto para el asunto -->
                     <input type="hidden" name="_subject" id="hidden-asunto">
-        
+
                     <div class="formulario-grupo">
                         <label for="nombre">NOMBRE</label>
                         <input type="text" id="nombre" name="nombre" placeholder="nombre apellido" required>
@@ -154,7 +198,8 @@
                     </div>
                     <div class="formulario-grupo">
                         <label for="mensaje">TU MENSAJE</label>
-                        <textarea id="mensaje" name="mensaje" placeholder="Hola Eros, me comunico para..." required></textarea>
+                        <textarea id="mensaje" name="mensaje" placeholder="Hola Eros, me comunico para..."
+                            required></textarea>
                     </div>
                     <button type="submit" class="formulario-boton">ENVIAR</button>
                 </form>
@@ -166,7 +211,7 @@
                     <a href="#presentation" class="redes-link">CURRICULUM</a>
                 </div>
             </section>
-        
+
             <!-- Parte derecha (35%) -->
             <section class="main-formulario-derecha">
                 <h2 class="main-formulario-derecha-h2">E</h2>
@@ -184,5 +229,24 @@
 
     <div class="cursor-follower"></div>
     <script src="script.js"></script>
+    <script>
+        const carousel = document.getElementById('carousel-track');
+        const nextBtn = document.getElementById('btn-next');
+        const prevBtn = document.getElementById('btn-prev');
+
+        nextBtn.addEventListener('click', () => {
+            const scrollAmount = carousel.offsetWidth;
+            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            const scrollAmount = carousel.offsetWidth;
+            carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    </script>
+
+
+
 </body>
+
 </html>

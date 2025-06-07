@@ -24,22 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.getElementById("boton-cv").addEventListener("click", function () {
-    const link = document.createElement("a");
-    link.href = "documentos/CV_Eros_Diaz.pdf";
-    link.download = "CV_Eros_Diaz.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-});
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
 
 
