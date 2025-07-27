@@ -453,7 +453,7 @@ body{
     text-align: center;
     padding: 0% 10%;
     font-family: var(--fuente-pagina-bold);
-    font-size: 4vw;
+    font-size: 5.5vw;
     margin-top: 5%;
     margin-bottom: 3%;
 }
@@ -480,8 +480,8 @@ body{
 
 .main-proyectos-proyecto {
     flex: 0 0 auto;
-    width: 23vw;
-    height: 23vw;
+    width: 25vw;
+    height: 25vw;
     border-radius: 10px;
     display: flex;
     justify-content: center;
